@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cosmetic Packaging R&D and Mold Development | From Inquiry to Custom Tooling | JXPACK</title>
+<meta name="description" content="How JXPACK turns a cosmetic packaging idea into a production-ready mold — inquiry, feasibility review, 3D modeling, prototyping, tooling, T1 sample, and mass production. 200+ stock molds, private mold service, MOQ from 10,000pcs.">
+<link rel="canonical" href="https://www.jxpack.com/mold-development">
+<style>
+:root{
+  --cream:#FAF7F2; --cream-deep:#F1EADF; --cream-card:#FFFDFA;
+  --gold:#B8935A; --gold-soft:#D8C39A; --gold-pale:#F3EBDC;
+  --ink:#2A2520; --ink-soft:#6A6157; --ink-faint:#948B7F;
+  --line:#E6DDCD;
+  --serif:'Didot','Georgia','Times New Roman',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.narrow{max-width:820px;margin:0 auto;padding:0 28px}
+
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;letter-spacing:.01em;line-height:1.25}
+h1{font-size:46px}
+h2{font-size:34px;margin-bottom:14px}
+h3{font-size:23px;margin-bottom:10px}
+h4{font-size:18px;margin-bottom:6px}
+p{margin-bottom:16px;color:var(--ink-soft)}
+a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-soft);transition:border-color .2s}
+a:hover{border-bottom-color:var(--gold)}
+.lead{font-size:19px;color:var(--ink-soft);line-height:1.8}
+
+.eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.rule{width:64px;height:1px;background:var(--gold);margin:26px 0}
+section{padding:88px 0}
+.alt{background:var(--cream-deep)}
+.center{text-align:center}
+
+header.topbar{border-bottom:1px solid var(--line);background:var(--cream);position:sticky;top:0;z-index:20}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:var(--serif);font-size:21px;letter-spacing:.06em;color:var(--ink);border:none}
+.topnav{display:flex;gap:28px;font-size:14px}
+.topnav a{color:var(--ink-soft);border:none}
+.topnav a:hover{color:var(--gold)}
+
+.hero{padding:104px 0 84px;background:var(--cream);border-bottom:1px solid var(--line)}
+.hero h1{max-width:900px;margin-bottom:26px}
+.hero .lead{max-width:760px}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:48px}
+.stat{background:var(--cream-card);padding:26px 20px;text-align:center}
+.stat .num{font-family:var(--serif);font-size:34px;color:var(--gold);display:block;line-height:1.1}
+.stat .lbl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:8px;display:block}
+
+.btn{display:inline-block;background:var(--gold);color:#fff;border:1px solid var(--gold);padding:14px 34px;font-size:14px;letter-spacing:.12em;text-transform:uppercase;transition:background .2s}
+.btn:hover{background:#A07E48;border-color:#A07E48;color:#fff}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--gold-pale);color:var(--ink)}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+
+.tblwrap{overflow-x:auto;margin-top:34px}
+table{width:100%;border-collapse:collapse;background:var(--cream-card);font-size:14.5px;min-width:660px}
+th{background:var(--gold-pale);font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);font-weight:600;text-align:left;padding:15px 18px;border-bottom:1px solid var(--line)}
+td{padding:15px 18px;border-bottom:1px solid var(--line);color:var(--ink-soft);vertical-align:top}
+td:first-child{color:var(--ink);font-weight:500}
+tr:last-child td{border-bottom:none}
+
+.steps{margin-top:52px}
+.step{display:grid;grid-template-columns:96px 1fr;gap:32px;padding:38px 0;border-top:1px solid var(--line)}
+.step:last-child{border-bottom:1px solid var(--line)}
+.step .idx{font-family:var(--serif);font-size:44px;color:var(--gold-soft);line-height:1}
+.step h3{margin-bottom:4px}
+.step .time{display:inline-block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-soft);padding:4px 12px;margin-bottom:16px}
+.io{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:20px}
+.io .box{background:var(--cream-card);border:1px solid var(--line);padding:18px 20px}
+.io .box .t{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px}
+.io .box ul{list-style:none}
+.io .box li{font-size:14.5px;color:var(--ink-soft);padding:3px 0 3px 16px;position:relative;line-height:1.6}
+.io .box li::before{content:'';position:absolute;left:0;top:12px;width:5px;height:5px;background:var(--gold-soft);border-radius:50%}
+.step p:last-child{margin-bottom:0}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:40px}
+.card{background:var(--cream-card);border:1px solid var(--line);padding:30px 28px}
+.card h3,.card h4{color:var(--ink);font-size:18px;margin-bottom:6px}
+.card p{font-size:15px;margin-bottom:0}
+.card .tag{display:inline-block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.card.rec{border:1px solid var(--gold-soft);background:var(--gold-pale)}
+
+figure.ph{margin:26px 0 0}
+.ph-box{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:var(--cream-deep);border:1px dashed var(--gold-soft);color:var(--ink-faint);text-align:center;padding:24px}
+.alt .ph-box{background:var(--cream)}
+.card .ph-box{background:var(--cream-deep)}
+.card.rec .ph-box{background:var(--cream-card)}
+.ph-box.r16{aspect-ratio:16/9}
+.ph-box.r32{aspect-ratio:3/2}
+.ph-box.r43{aspect-ratio:4/3}
+.ph-box svg{opacity:.45;color:var(--gold)}
+.ph-box .dim{font-size:13px;letter-spacing:.14em;color:var(--gold)}
+figure.ph figcaption{margin-top:10px;font-size:13px;color:var(--ink-faint);font-style:italic;line-height:1.65}
+
+.faq{max-width:820px;margin:44px auto 0}
+details{border-bottom:1px solid var(--line);padding:22px 0}
+details summary{font-family:var(--serif);font-size:19px;cursor:pointer;list-style:none;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:20px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';color:var(--gold);font-size:24px;font-family:var(--sans);flex-shrink:0}
+details[open] summary::after{content:'\2212'}
+details p{margin:14px 0 0;font-size:15.5px}
+
+.ilgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+.il{background:var(--cream-card);border:1px solid var(--line);padding:20px 18px;display:block;border-bottom:1px solid var(--line)}
+.il:hover{border-color:var(--gold);background:var(--gold-pale)}
+.il .n{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:8px}
+.il .t{font-family:var(--serif);font-size:17px;color:var(--ink);display:block;line-height:1.35}
+
+.plinks{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.plinks a{border:1px solid var(--line);background:var(--cream-card);padding:9px 18px;font-size:14px;color:var(--ink-soft)}
+.plinks a:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-pale)}
+
+.form{background:var(--cream-card);border:1px solid var(--line);padding:40px;max-width:760px;margin:44px auto 0}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+label{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:7px}
+input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);background:var(--cream);font-family:var(--sans);font-size:15px;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+textarea{min-height:110px;resize:vertical}
+.full{margin-bottom:18px}
+
+footer{border-top:1px solid var(--line);padding:44px 0;font-size:14px;color:var(--ink-faint);background:var(--cream)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+@media(max-width:860px){
+  h1{font-size:34px}h2{font-size:27px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .step{grid-template-columns:1fr;gap:14px}
+  .step .idx{font-size:34px}
+  .io,.two,.ilgrid{grid-template-columns:1fr}
+  .frow{grid-template-columns:1fr}
+  .topnav{display:none}
+  section{padding:64px 0}
+}
+</style>
+</head>
+<body>
+
+<!--
+================================================================================
+  图片占位符替换说明
+================================================================================
+  本页共 14 个占位图，每个都长这样：
+
+      <figure class="ph">
+        <div class="ph-box r16">
+          <svg ...></svg>
+          <span class="dim">1600 x 900</span>
+        </div>
+        <figcaption>英文图注</figcaption>
+      </figure>
+
+  换成真图时，把整个 <figure>...</figure> 替换成：
+
+      <figure class="ph">
+        <img src="/image/your-photo.jpg" alt="英文描述" loading="lazy" style="width:100%;height:auto;display:block">
+        <figcaption>英文图注</figcaption>
+      </figure>
+
+  alt 一定要写 —— 那是 Google 图片搜索读的内容。
+  每个占位符上方有中文注释，写明这张应该拍什么。
+================================================================================
+-->
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="https://www.jxpack.com" class="brand">JXPACK</a>
+    <nav class="topnav">
+      <a href="/oem">Customization</a>
+      <a href="/products">Products</a>
+      <a href="/Why-JXPACK">Why JXPACK</a>
+      <a href="/contact-us">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">R&amp;D and mold development</p>
+    <h1>Cosmetic Packaging Mold Development: From Your Inquiry to Production-Ready Tooling</h1>
+    <div class="rule"></div>
+    <p class="lead">A <a href="/products">custom bottle, jar, or closure</a> starts long before <a href="#stage-05">steel is cut</a>. JXPACK's <a href="/Why-JXPACK">in-house R&amp;D team</a> reviews your brief, models the structure, prototypes it in 3D, and develops the custom mold — so the shape you approve is the shape that <a href="#stage-07">runs on our production lines</a>. Choose from <a href="/oem#mold">200+ existing molds</a> to skip tooling cost, or commission a <a href="/oem#mold">private mold</a> for an exclusive form.</p>
+    <div class="stats">
+      <div class="stat"><span class="num"><a href="/oem#mold">200+</a></span><span class="lbl">Stock molds available</span></div>
+      <div class="stat"><span class="num">3 wks</span><span class="lbl">Inquiry to <a href="#stage-06">T1 sample</a></span></div>
+      <div class="stat"><span class="num">15+</span><span class="lbl">Years manufacturing</span></div>
+      <div class="stat"><span class="num">10k</span><span class="lbl"><a href="#faq">MOQ</a> for private mold</span></div>
+    </div>
+    <div class="cta-row">
+      <a href="#inquiry" class="btn">Start your mold project</a>
+      <a href="/oem" class="btn ghost">See customization options</a>
+    </div>
+
+    <!-- 图 01 · Hero 主视觉：定制成品瓶罐排列 / 模具特写，米色背景，右侧留白 -->
+    <figure class="ph">
+      <div class="ph-box r16">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-6 6-3-3-4 4"/></svg>
+        <span class="dim">1600 × 900</span>
+      </div>
+      <figcaption>Placeholder 01 — hero image: custom mold close-up or finished custom bottles on a clean background.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Process overview</p>
+    <h2>The seven stages of custom mold development</h2>
+    <p>Every cosmetic packaging mold we build follows the same path. You always know what happens next, what we need from you, and how long it takes.</p>
+    <div class="tblwrap">
+      <table>
+        <thead>
+          <tr><th>Stage</th><th>What happens</th><th>What you provide</th><th>What you receive</th><th>Lead time</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><a href="#stage-01">01 Inquiry</a></td><td>Requirement brief and initial feasibility check</td><td>Product type, <a href="/oem#capacity">capacity</a>, market, order plan</td><td>Structure recommendation, budget range</td><td>Within 24h</td></tr>
+          <tr><td><a href="#stage-02">02 Feasibility</a></td><td>Engineering review, mold plan, quotation</td><td>Reference images, drawings if available</td><td>Tooling cost, unit price, MOQ, timeline</td><td>2–3 business days</td></tr>
+          <tr><td><a href="#stage-03">03 Design</a></td><td>Technical drawings and 3D modeling</td><td>Feedback on concepts</td><td>2D drawings, 3D renderings</td><td>~1 week</td></tr>
+          <tr><td><a href="#stage-04">04 3D prototype</a></td><td>Printed prototype for proportion and grip review</td><td>Approval of form</td><td>Physical 3D sample</td><td>2–3 days</td></tr>
+          <tr><td><a href="#stage-05">05 Tooling</a></td><td>Mold steel selection, cavity layout, machining</td><td>Signed-off drawings</td><td>Production mold completed</td><td>~3 weeks</td></tr>
+          <tr><td><a href="#stage-06">06 T1 sample</a></td><td>First trial shots, dimension and fit testing</td><td>Sample evaluation</td><td>T1 samples in chosen color and finish</td><td>1 week</td></tr>
+          <tr><td><a href="#stage-07">07 Mass production</a></td><td>Sample approval, production, QC, shipment</td><td>Final approval</td><td>Finished packaging, inspection report</td><td>By order volume</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Stage by stage</p>
+    <h2>Mold development process: what happens at each step</h2>
+    <p>Below is the same workflow in detail, including the inputs we need from your team and the deliverables you get back.</p>
+
+    <div class="steps">
+
+      <article class="step" id="stage-01">
+        <div class="idx">01</div>
+        <div>
+          <span class="time">Within 24 hours</span>
+          <h3>Inquiry and requirement brief</h3>
+          <p>You send us the basics: which product the packaging holds, <a href="/oem#capacity">target capacity</a>, <a href="/oem#material">material direction</a>, destination market, and expected order volume. Our team replies with a first structural recommendation and an indicative budget range, so you can decide whether the project is worth pursuing before spending anything. A complete brief at this stage prevents costly rework later — for example, the target capacity decides mold cavity size, and the destination market decides which material and decoration pass local compliance such as <a href="/oem#material">REACH</a> or <a href="/oem#material">FDA</a>.</p>
+          <p>If you already have a reference photo, a sketch, or a competitor sample, share it — a visual reference shortens the whole development cycle. Every brief is handled under mutual NDA, and our team returns a first recommendation within 24 hours, so you can scope budget before committing any tooling.</p>
+
+          <!-- 图 02：客户提供的参考资料示例 —— 参考照片 + 手绘草图 + 竞品样品 三格拼贴 -->
+          <figure class="ph">
+            <div class="ph-box r32">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-6 6-3-3-4 4"/></svg>
+              <span class="dim">800 × 500</span>
+            </div>
+            <figcaption>Placeholder 02 — examples of reference material clients send us: photo, sketch, competitor sample.</figcaption>
+          </figure>
+
+          <div class="io">
+            <div class="box"><div class="t">What we need from you</div><ul><li>Product type and formula characteristics</li><li><a href="/oem#capacity">Target capacity or size range</a></li><li>Estimated annual volume</li><li>Reference images or sketches (optional)</li></ul></div>
+            <div class="box"><div class="t">What you receive</div><ul><li>Initial feasibility assessment</li><li>Recommended structure and material</li><li>Indicative cost range</li><li>Assigned project contact</li></ul></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="step" id="stage-02">
+        <div class="idx">02</div>
+        <div>
+          <span class="time">2–3 business days</span>
+          <h3>Feasibility review and quotation</h3>
+          <p>Our engineers check the details that decide whether a design can actually be manufactured: wall thickness, draft angle, thread geometry, filling line compatibility, and <a href="/oem#accessories">how the closure seals</a>. We then advise whether an <a href="/oem#mold">existing mold</a> can be adapted or a new private mold is required. We also flag risk early: very thin walls may warp, an aggressive draft angle may stick in the cavity, and an unusual neck finish may need a custom closure. Catching these in engineering saves weeks downstream.</p>
+          <p>You receive a formal quotation covering tooling cost, unit price at different volumes, <a href="#faq">MOQ</a>, and a stage-by-stage timeline. The quotation is itemised, not a lump sum — you see exactly what the mold, sampling, and per-unit cost look like at 10k, 50k, and 100k pieces, which makes volume planning straightforward.</p>
+
+          <!-- 图 03：结构评审 —— 断面图 / 拔模角与壁厚标注 / 工程师看图场景 -->
+          <figure class="ph">
+            <div class="ph-box r32">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-6 6-3-3-4 4"/></svg>
+              <span class="dim">800 × 500</span>
+            </div>
+            <figcaption>Placeholder 03 — engineering review: wall thickness, draft angle, thread geometry callouts.</figcaption>
+          </figure>
+
+          <div class="io">
+            <div class="box"><div class="t">What we need from you</div><ul><li>Confirmation of volume tiers</li><li>Target unit price if defined</li><li>Market compliance requirements</li></ul></div>
+            <div class="box"><div class="t">What you receive</div><ul><li>Mold plan: stock adapt or private</li><li>Tooling quotation</li><li>Unit price by volume tier</li><li>Confirmed MOQ and lead time</li></ul></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="step" id="stage-03">
+        <div class="idx">03</div>
+        <div>
+          <span class="time">About 1 week</span>
+          <h3>Design, drawings, and 3D modeling</h3>
+          <p>We produce technical drawings and photorealistic 3D renderings of your packaging. This is where the silhouette, <a href="/oem#mold">neck finish, shoulder curve, and fill line</a> get locked down. Material is confirmed here too — see our <a href="/oem#material">material selection guide</a> for how glass, PET, PETG, and PP compare on barrier performance and cost.</p>
+          <p>Capacity is finalised in the same stage, whether you need a mainstream size or something outside our standard <a href="/oem#capacity">capacity range</a>. Drawings follow a standard your contract manufacturer can read directly, so the mold we cut matches the part you approve — no silent interpretation gaps. If you are unsure which size fits your formula and fill volume, our team can recommend a standard size that already has a proven mold, which shortens lead time.</p>
+
+          <!-- 图 04：设计输出 —— 2D 技术图纸 + 3D 渲染图并排 -->
+          <figure class="ph">
+            <div class="ph-box r32">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-6 6-3-3-4 4"/></svg>
+              <span class="dim">800 × 500</span>
+            </div>
+            <figcaption>Placeholder 04 — 2D technical drawing alongside a 3D rendering of the same bottle.</figcaption>
+          </figure>
+
+          <div class="io">
+            <div class="box"><div class="t">What we need from you</div><ul><li>Feedback on design direction</li><li>Material and capacity decision</li><li><a href="/oem#accessories">Closure and dispensing preference</a></li></ul></div>
+            <div class="box"><div class="t">What you receive</div><ul><li>2D technical drawings</li><li>3D renderings from multiple angles</li><li>Revised volume and weight data</li><li>Decoration placement proposal</li></ul></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="step" id="stage-04">
+        <div class="idx">04</div>
+        <div>
+          <span class="time">2–3 days</span>
+          <h3>3D printed prototype</h3>
+          <p>Screens never tell you how a bottle feels in the hand. We print a physical prototype so you can check <a href="/oem#capacity">proportion</a>, grip, and shelf presence before any tooling begins. Changes at this stage cost nothing — changes after tooling starts do. We typically print at 1:1 scale, including the closure, so the proportions you judge are the proportions you will sell. This is the cheapest point in the whole project to change the shape, add a finger grip, or adjust the shoulder. Most brands run one round of prototype feedback; it is normal to tweak wall thickness or the cap interface here, so the steel is cut only once.</p>
+
+          <!-- 图 05：3D 打印样件 —— 手持展示比例与握感，最好有手入镜 -->
+          <figure class="ph">
+            <div class="ph-box r32">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-6 6-3-3-4 4"/></svg>
+              <span class="dim">800 × 500</span>
+            </div>
+            <figcaption>Placeholder 05 — 3D printed prototype held in hand to show proportion and grip.</figcaption>
+          </figure>
+
+          <div class="io">
+            <div class="box"><div class="t">What we need from you</div><ul><li>Approval of form and proportion</li><li>Any final shape adjustments</li></ul></div>
+            <div class="box"><div class="t">What you receive</div><ul><li>Physical 3D printed prototype</li><li>Updated drawings if revised</li></ul></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="step" id="stage-05">
+        <div class="idx">05</div>
+        <div>
+          <span class="time">About 3 weeks</span>
+          <h3>Mold development and tooling</h3>
+          <p>Once drawings are signed off, our R&amp;D engineers cut your custom mold. Tooling method depends on your packaging format: injection molding for <a href="/oem#accessories">caps and closures</a>, and <a href="/products/plastic-cosmetic-bottles">thick-wall jars</a>; injection stretch blow molding for <a href="/products/plastic-cosmetic-bottles">PET bottles</a>; extrusion blow molding for HDPE and LDPE containers. Cavity count is set by your volume plan. Steel grade is chosen by expected lifetime and volume: pre-hardened steel for runs up to a few hundred thousand, hardened steel for long programs. Cavity layout is balanced so every cavity fills identically, which keeps dimensional spread tight across the whole shot.</p>
+          <p>Decoration is engineered into the same stage — if you plan to use hot stamping, silk screen printing, or spray coating, tell us now so the surface geometry supports it. Browse our <a href="/oem#decoration">decoration and finishing processes</a> before this step. Surface finish for decoration is built into the tool where possible — a textured band or a flat landing for hot stamping is cut directly, rather than added later, so registration stays consistent across the run.</p>
+
+          <!-- 图 06：模具加工 —— 模具钢型腔特写 / CNC 加工中 / 模具装配 -->
+          <figure class="ph">
+            <div class="ph-box r32">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-6 6-3-3-4 4"/></svg>
+              <span class="dim">800 × 500</span>
+            </div>
+            <figcaption>Placeholder 06 — mold cavity close-up or CNC machining in progress.</figcaption>
+          </figure>
+
+          <div class="io">
+            <div class="box"><div class="t">What we need from you</div><ul><li>Signed-off technical drawings</li><li><a href="/oem#decoration">Confirmation of decoration method</a></li><li>Volume plan for cavity layout</li></ul></div>
+            <div class="box"><div class="t">What you receive</div><ul><li>Completed production mold</li><li>Tooling schedule updates</li><li>Maintenance and ownership terms</li></ul></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="step" id="stage-06">
+        <div class="idx">06</div>
+        <div>
+          <span class="time">About 1 week</span>
+          <h3>T1 sample, color matching, and revision</h3>
+          <p>The first trial shots come off the mold as T1 samples. We measure dimensions, test closure fit and sealing, and run a filling check. This is also when color gets confirmed — we match to <a href="/oem#color">any Pantone reference</a> with a reproduction rate above 95%. Color is signed off against a physical master; we record the formula so repeat orders match the first one, and dimensional reports are shared with you, not buried.</p>
+          <p>If your packaging needs a pump, sprayer, dropper, or specific liner, we fit the <a href="/oem#accessories">accessories and closures</a> at this stage and test the assembled unit. If the first shot is not right, we revise the mold and produce T2 samples — the loop repeats until the sealed, filled, and drop tests all pass. You only pay for tooling once.</p>
+
+          <!-- 图 07：T1 样品 + 色卡 —— 试模样品与 Pantone 色卡并置对比 -->
+          <figure class="ph">
+            <div class="ph-box r32">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-6 6-3-3-4 4"/></svg>
+              <span class="dim">800 × 500</span>
+            </div>
+            <figcaption>Placeholder 07 — T1 trial samples with Pantone reference chips for color confirmation.</figcaption>
+          </figure>
+
+          <div class="io">
+            <div class="box"><div class="t">What we need from you</div><ul><li><a href="/oem#color">Pantone or physical color reference</a></li><li>Sample evaluation feedback</li><li>Closure and accessory confirmation</li></ul></div>
+            <div class="box"><div class="t">What you receive</div><ul><li>T1 samples in agreed color and finish</li><li>Dimension and sealing test data</li><li>Revised T2 samples if needed</li></ul></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="step" id="stage-07">
+        <div class="idx">07</div>
+        <div>
+          <span class="time">By order volume</span>
+          <h3>Sample approval and mass production</h3>
+          <p>You sign off the approved sample and we move to production. <a href="/Why-JXPACK">Automated lines</a> handle molding, <a href="/oem#decoration">decoration</a>, and assembly, with incoming material checks, in-process inspection, and final review on every batch. Finished goods are packed to your logistics schedule. Before mass production we freeze the approved sample as the golden master; each batch is compared against it for color, weight, and dimension, and an inspection report ships with the goods. Carton and pallet layout follow your logistics plan — whether FOB Guangzhou, EXW, or delivered to a third-party warehouse — so the goods arrive shelf-ready.</p>
+
+          <!-- 图 08：量产 —— 自动化产线运行 + 检验环节 -->
+          <figure class="ph">
+            <div class="ph-box r32">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-6 6-3-3-4 4"/></svg>
+              <span class="dim">800 × 500</span>
+            </div>
+            <figcaption>Placeholder 08 — automated production line running an approved custom order.</figcaption>
+          </figure>
+
+          <div class="io">
+            <div class="box"><div class="t">What we need from you</div><ul><li>Signed approval sample</li><li>Purchase order and delivery schedule</li></ul></div>
+            <div class="box"><div class="t">What you receive</div><ul><li>Mass production output</li><li>Pre-shipment inspection report</li><li>Export packing and documentation</li></ul></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Which route fits your project</p>
+    <h2>Stock mold or private mold</h2>
+    <p>The single biggest decision in any cosmetic packaging development is whether to adapt a mold we already own or build a new one. Here is how the two routes compare.</p>
+    <div class="two">
+      <div class="card">
+        <span class="tag">Route A</span>
+        <h3>Adapt an existing mold</h3>
+        <p>We maintain more than <a href="/oem#mold">200 sets of mature molds</a> covering market-proven shapes and mainstream <a href="/oem#capacity">capacities</a>. Adapting one removes tooling cost entirely and cuts weeks off your launch. Best for fast timelines, smaller volumes, and brands validating a new product line.</p>
+
+        <!-- 图 09：现有模具阵列 —— 200+ 套模具墙实拍，体现规模 -->
+        <figure class="ph">
+          <div class="ph-box r32">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-6 6-3-3-4 4"/></svg>
+            <span class="dim">800 × 450</span>
+          </div>
+          <figcaption>Placeholder 09 — stock mold wall, showing scale of existing tooling.</figcaption>
+        </figure>
+      </div>
+
+      <div class="card rec">
+        <span class="tag">Route B</span>
+        <h3>Develop a private mold</h3>
+        <p>A private mold gives you an exclusive form no competitor can buy. Tooling is a one-time cost, the shape belongs to your brand, and unit price drops as volume grows. Best for established lines, brand differentiation, and <a href="#faq">volumes from 10,000 pieces</a>.</p>
+
+        <!-- 图 10：私模成品 —— 独家瓶型案例，突出差异化造型 -->
+        <figure class="ph">
+          <div class="ph-box r32">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-6 6-3-3-4 4"/></svg>
+            <span class="dim">800 × 450</span>
+          </div>
+          <figcaption>Placeholder 10 — a distinctive private mold shape produced for one brand.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="tblwrap">
+      <table>
+        <thead><tr><th>Comparison</th><th>Stock mold</th><th>Private mold</th></tr></thead>
+        <tbody>
+          <tr><td>Tooling cost</td><td>None or minimal adaptation fee</td><td>One-time tooling investment</td></tr>
+          <tr><td>Time to first sample</td><td>7–10 days</td><td>About 3 weeks to T1</td></tr>
+          <tr><td>MOQ</td><td>From 1,000 pcs</td><td>From 10,000 pcs</td></tr>
+          <tr><td>Shape exclusivity</td><td>Shared with other buyers</td><td>Exclusive to your brand</td></tr>
+          <tr><td>Structural freedom</td><td>Limited to existing geometry</td><td>Full custom structure</td></tr>
+          <tr><td>Best for</td><td>Fast launch, trial orders</td><td>Brand differentiation, scale</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:24px">Not sure which route fits? Send us your brief and we will recommend one — we have no incentive to sell you tooling you do not need. See the full <a href="/oem">customization capability overview</a> for what can be changed on each route.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Tooling methods</p>
+    <h2>Molding processes we run in-house</h2>
+    <p>Different packaging formats need different tooling — a PET cosmetic bottle and a thick-wall jar are not made the same way. Matching the process to your container is what keeps wall thickness consistent and closures sealing properly.</p>
+    <div class="two">
+
+      <div class="card">
+        <h3>Injection molding</h3>
+        <p>Used for <a href="/oem#accessories">caps, closures</a>, and <a href="/products/plastic-cosmetic-bottles">thick-wall cosmetic jars</a>. Delivers tight dimensional tolerance and crisp detail for threaded necks and tamper-evident features.</p>
+        <!-- 图 11：注塑 —— 盖子 / 厚壁膏霜罐 注塑件特写 -->
+        <figure class="ph">
+          <div class="ph-box r43">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-6 6-3-3-4 4"/></svg>
+            <span class="dim">600 × 450</span>
+          </div>
+        </figure>
+      </div>
+
+      <div class="card">
+        <h3>Injection stretch blow molding</h3>
+        <p>The standard route for <a href="/products/plastic-cosmetic-bottles">PET cosmetic bottles</a>. Produces clear, lightweight containers with good barrier properties for serums, lotions, and toners.</p>
+        <!-- 图 12：注拉吹 —— PET 瓶坯到成品 / 透明 PET 瓶 -->
+        <figure class="ph">
+          <div class="ph-box r43">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-6 6-3-3-4 4"/></svg>
+            <span class="dim">600 × 450</span>
+          </div>
+        </figure>
+      </div>
+
+      <div class="card">
+        <h3>Extrusion blow molding</h3>
+        <p>Suited to <a href="/oem#material">HDPE and LDPE</a> bottles for larger volumes and household formats, including round, oval, and handled shapes.</p>
+        <!-- 图 13：挤吹 —— HDPE / LDPE 大容量瓶、带手柄造型 -->
+        <figure class="ph">
+          <div class="ph-box r43">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-6 6-3-3-4 4"/></svg>
+            <span class="dim">600 × 450</span>
+          </div>
+        </figure>
+      </div>
+
+      <div class="card">
+        <h3>Glass mold production</h3>
+        <p>For <a href="/products/glass-bottle">premium skincare and fragrance</a>. Supports <a href="/oem#material">flint, frosted, and amber glass</a> with custom embossing and heavy-base designs.</p>
+        <!-- 图 14：玻璃模 —— 厚底 / 浮雕 / 琥珀色 玻璃瓶 -->
+        <figure class="ph">
+          <div class="ph-box r43">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-6 6-3-3-4 4"/></svg>
+            <span class="dim">600 × 450</span>
+          </div>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="narrow">
+    <p class="eyebrow center">Common questions</p>
+    <h2 class="center">Mold development FAQ</h2>
+    <div class="faq">
+      <details><summary>How much does a custom cosmetic packaging mold cost?</summary><p>Tooling cost depends on structure complexity, cavity count, and steel grade. A simple adaptation of an existing mold may carry no tooling fee at all, while a multi-cavity private mold for a complex bottle is a larger one-time investment. We quote the exact figure at the feasibility stage, before you commit to anything.</p></details>
+      <details><summary>How long does mold development take?</summary><p>Roughly three weeks from signed-off drawings to T1 sample for a private mold. If an existing mold can be adapted, first samples typically arrive within 7–10 days. Full project timeline including design and approvals is usually five to seven weeks.</p></details>
+      <details><summary>What is the MOQ for a private mold project?</summary><p>Private mold projects start at 10,000 pieces. Adapting an <a href="/oem#mold">existing mold</a> can start from 1,000 pieces for stock colors. Both routes scale with volume, and unit price decreases at higher tiers.</p></details>
+      <details><summary>Can you modify an existing mold instead of building a new one?</summary><p>Often yes. With 200+ stock molds we can frequently adjust neck finish, <a href="/oem#color">color</a>, <a href="/oem#decoration">decoration</a>, or <a href="/oem#capacity">capacity</a> without new tooling. We will tell you honestly if your design needs a private mold instead.</p></details>
+      <details><summary>Who owns the mold after development?</summary><p>The mold belongs to you once tooling is paid. We maintain it free of charge while it stays in production with us, and it is reserved exclusively for your orders.</p></details>
+      <details><summary>Can you sign an NDA before I share my design?</summary><p>Yes. <a href="/contact-us">We sign mutual NDAs</a> before any drawings or concepts are exchanged, and we are glad to use your own template.</p></details>
+      <details><summary>What file formats do you need to start?</summary><p>A photo, sketch, or reference sample is enough to begin. If you have technical files, we work with STEP, IGES, DWG, and PDF. Our team can also create the drawings from scratch based on your brief.</p></details>
+      <details><summary>What if the T1 sample does not meet expectations?</summary><p><a href="/oem#mold">We revise the mold</a> and produce T2 samples. Minor dimensional corrections are routine at this stage and are handled before mass production begins — you approve the final sample before we run your order.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Internal links</p>
+    <h2>Explore our full customization capabilities</h2>
+    <p>Mold development is one part of the OEM/ODM process. Once the shape is fixed, every other element can be tailored to your brand — each module below links directly to the relevant section of our customization page.</p>
+    <div class="ilgrid">
+      <a class="il" href="/oem#color"><span class="n">Module 01</span><span class="t">Color customization</span></a>
+      <a class="il" href="/oem#logo"><span class="n">Module 02</span><span class="t">Branding and logo design</span></a>
+      <a class="il" href="/oem#capacity"><span class="n">Module 03</span><span class="t">Capacity and sizing</span></a>
+      <a class="il" href="/oem#decoration"><span class="n">Module 04</span><span class="t">Decoration and processes</span></a>
+      <a class="il" href="/oem#accessories"><span class="n">Module 05</span><span class="t">Accessories and closures</span></a>
+      <a class="il" href="/oem#mold"><span class="n">Module 06</span><span class="t">Shape and structure</span></a>
+      <a class="il" href="/oem#material"><span class="n">Module 07</span><span class="t">Material selection</span></a>
+      <a class="il" href="/oem"><span class="n">Overview</span><span class="t">Full OEM / ODM services</span></a>
+    </div>
+    <p style="margin-top:34px">Looking for a specific packaging format instead? Browse the categories below — each supports the same customization route.</p>
+    <div class="plinks">
+      <a href="/products/glass-bottle">Glass bottles and jars</a>
+      <a href="/products/airless-pump-bottles">Airless pump bottles</a>
+      <a href="/products/plastic-cosmetic-bottles">Plastic cosmetic bottles</a>
+      <a href="/products/tube">Cosmetic tubes</a>
+      <a href="/products/makeup">Makeup packaging</a>
+      <a href="/products/unique-product">Unique and custom shapes</a>
+      <a href="/products">All products</a>
+    </div>
+  </div>
+</section>
+
+<section id="inquiry">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Start your project</p>
+      <h2>Tell us what you want to build</h2>
+      <p>Share the basics and our engineering team will come back with a feasibility view, a mold recommendation, and an indicative quote within one business day.</p>
+    </div>
+    <form class="form">
+      <div class="frow">
+        <div><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name"></div>
+        <div><label for="email">Business email</label><input id="email" name="email" type="email" placeholder="name@company.com"></div>
+      </div>
+      <div class="frow">
+        <div><label for="ptype">Packaging type</label><select id="ptype" name="ptype"><option>Bottle</option><option>Jar</option><option>Tube</option><option>Closure or pump</option><option>Other</option></select></div>
+        <div><label for="route">Preferred route</label><select id="route" name="route"><option>Not sure yet — please advise</option><option>Adapt an existing mold</option><option>Develop a private mold</option></select></div>
+      </div>
+      <div class="full"><label for="message">Project details</label><textarea id="message" name="message" placeholder="Capacity, material, target market, estimated volume, and any reference you can share."></textarea></div>
+      <button type="submit" class="btn">Send inquiry</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Guangzhou JXPACK Technology Co., Ltd. — Cosmetic packaging manufacturer</span>
+    <span><a href="/oem">Customization</a> &nbsp;·&nbsp; <a href="/Why-JXPACK">Why JXPACK</a> &nbsp;·&nbsp; <a href="/contact-us">Contact</a></span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Service",
+      "name":"Cosmetic Packaging R&D and Mold Development",
+      "serviceType":"Custom mold development for cosmetic packaging",
+      "provider":{"@type":"Organization","name":"Guangzhou JXPACK Technology Co., Ltd.","url":"https://www.jxpack.com"},
+      "areaServed":"Worldwide",
+      "description":"End-to-end mold development for cosmetic bottles, jars, and closures: requirement brief, feasibility review, 3D modeling, prototyping, tooling, T1 sample, and mass production.",
+      "offers":{"@type":"Offer","description":"Stock mold adaptation and private mold development, MOQ from 10,000 pieces"}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"How much does a custom cosmetic packaging mold cost?","acceptedAnswer":{"@type":"Answer","text":"Tooling cost depends on structure complexity, cavity count, and steel grade. A simple adaptation of an existing mold may carry no tooling fee at all, while a multi-cavity private mold for a complex bottle is a larger one-time investment. We quote the exact figure at the feasibility stage, before you commit to anything."}},
+        {"@type":"Question","name":"How long does mold development take?","acceptedAnswer":{"@type":"Answer","text":"Roughly three weeks from signed-off drawings to T1 sample for a private mold. If an existing mold can be adapted, first samples typically arrive within 7-10 days. Full project timeline including design and approvals is usually five to seven weeks."}},
+        {"@type":"Question","name":"What is the MOQ for a private mold project?","acceptedAnswer":{"@type":"Answer","text":"Private mold projects start at 10,000 pieces. Adapting an existing mold can start from 1,000 pieces for stock colors. Both routes scale with volume, and unit price decreases at higher tiers."}},
+        {"@type":"Question","name":"Can you modify an existing mold instead of building a new one?","acceptedAnswer":{"@type":"Answer","text":"Often yes. With 200+ stock molds we can frequently adjust neck finish, color, decoration, or capacity without new tooling. We will tell you honestly if your design needs a private mold instead."}},
+        {"@type":"Question","name":"Who owns the mold after development?","acceptedAnswer":{"@type":"Answer","text":"The mold belongs to you once tooling is paid. We maintain it free of charge while it stays in production with us, and it is reserved exclusively for your orders."}},
+        {"@type":"Question","name":"Can you sign an NDA before I share my design?","acceptedAnswer":{"@type":"Answer","text":"Yes. We sign mutual NDAs before any drawings or concepts are exchanged, and we are glad to use your own template."}},
+        {"@type":"Question","name":"What file formats do you need to start?","acceptedAnswer":{"@type":"Answer","text":"A photo, sketch, or reference sample is enough to begin. If you have technical files, we work with STEP, IGES, DWG, and PDF. Our team can also create the drawings from scratch based on your brief."}},
+        {"@type":"Question","name":"What if the T1 sample does not meet expectations?","acceptedAnswer":{"@type":"Answer","text":"We revise the mold and produce T2 samples. Minor dimensional corrections are routine at this stage and are handled before mass production begins — you approve the final sample before we run your order."}}
+      ]
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.jxpack.com"},
+        {"@type":"ListItem","position":2,"name":"OEM / ODM Customization","item":"https://www.jxpack.com/oem"},
+        {"@type":"ListItem","position":3,"name":"R&D and Mold Development","item":"https://www.jxpack.com/mold-development"}
+      ]
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
